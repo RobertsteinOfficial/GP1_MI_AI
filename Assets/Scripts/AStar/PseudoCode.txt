@@ -1,0 +1,24 @@
+OPEN  //lista di nodi da valutare
+CLOSED //lista di nodi già valutati
+
+loop 
+
+current = il nodo in OPEN con l'f-cost minore
+rimuovo current da OPEN
+aggiungo current a CLOSED
+
+if current è il nodo destinazione ho trovato il percorso
+faccio return
+
+foreach neighbour del current node
+if neighbour è un ostacolo o comunque è in CLOSED
+skippo al prossimo
+
+if il nuovo percorso verso neighbour è più corto 
+O neighbour non è in OPEN
+
+setto f_cost di neighbour
+setto current come parent di neighbour
+
+if neighbour non è in OPEN
+aggiungo neighbour a OPEN
